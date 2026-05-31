@@ -10,7 +10,7 @@
 // Required Netlify env var:  ANTHROPIC_API_KEY
 // (Site settings → Environment variables → Add a variable)
 
-const MODEL = "claude-3-5-haiku-latest";
+const MODEL = "claude-haiku-4-5-20251001";
 const MAX_TOKENS = 1024;
 
 // ── Basic per-IP rate limiting ───────────────────────────────────────────────
