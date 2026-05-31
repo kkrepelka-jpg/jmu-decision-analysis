@@ -1,0 +1,16 @@
+# Build settings: this is a static site (no build step) plus one serverless function.
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Pretty endpoint: the front-end calls /api/chat, which maps to the function.
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+
+# SPA-style fallback for everything else.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
